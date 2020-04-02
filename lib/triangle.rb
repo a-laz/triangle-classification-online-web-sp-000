@@ -6,18 +6,21 @@ class Triangle
     @side1 = side1
     @side2 = side2
     @side3 = side3
-    #
+    #valid_triangle
   end
 
   def kind
     if @side1 == @side2 && @side2 == @side3
       :equilateral
-    elsif (@side1 == @side2 && @side2 != @side3) || (@side2 == @side3 && @side3 != @side1) || (@side1 == @side3 && @side3 != @side2)
+    elsif @side1 == @side2 || @side2 == @side3 || @side1 == @side3 
       :isosceles
-    elsif @side1 != @side2 && @side1 != @side3 && @side2 != @side3
+    else
       :scalene
     end
   end
+
+  def valid_triangle
+    
 
   class TriangleError < StandardError
   end
