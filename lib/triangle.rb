@@ -23,6 +23,8 @@ class Triangle
     triangle = []
     [@side1, @side2, @side3].each do |side|
       triangle << false if side <= 0
+      raise TriangleError if real_triangle.include?(false)
+    end
   end
 
 
