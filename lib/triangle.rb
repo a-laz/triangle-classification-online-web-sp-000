@@ -6,10 +6,10 @@ class Triangle
     @side1 = side1
     @side2 = side2
     @side3 = side3
-    valid_triangle
   end
 
   def kind
+    valid_triangle
     if @side1 == @side2 && @side2 == @side3
       :equilateral
     elsif @side1 == @side2 || @side2 == @side3 || @side1 == @side3
