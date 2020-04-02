@@ -3,10 +3,10 @@ class Triangle
   attr_accessor :equilateral, :isosceles, :scalene
 
   def initialize(side1, side2, side3)
-    @side1 = side1
-    @side2 = side2
-    @side3 = side3
-    if (side1 == 0 || side2 == 0 || side3 == 0)
+    @side1 = side1.to_int
+    @side2 = side2.to_int
+    @side3 = side3.to_int
+    if (side1 == 0 || side2 == 0 || side3 == 0) || (side1.class != Integer || side2.class != Integer || side3.class != Integer)
       raise TriangleError
     end
   end
